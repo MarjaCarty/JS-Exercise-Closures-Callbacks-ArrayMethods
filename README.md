@@ -42,6 +42,8 @@ Find the file `index.js` and complete the tasks until your tests are passing.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+  A: Closures are when the inner scope of a function references variables created in an outer scope that's still within a function.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +65,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+  A: When the inner function uses the "name" parameter
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+  A: Since it's two separate function calls, the random number given will differ every time dansRoll() is called. However, the name "Dan" will always be the same.
+
 c. What is the lexical scope of `newRoll`? 
+  A: Within the anonymous function returned by personalDice()
 
 ### Task 3 - Stretch Goals
 
