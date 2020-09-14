@@ -79,10 +79,14 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(num, callback){
 
-  /*Code Here*/
+  const scoreObj = {
+    "Home": num * callback,
+    "Away": num * callback
+  }
 
+  return scoreObj;
 }
 
 /* Task 4: 
