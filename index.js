@@ -123,6 +123,7 @@ and returns the score at each pont in the game, like so:
 
 Final Score: awayTeam - homeTeam */
 // ****************Two callbacks, returns an object*****************
+
 // function getInningScore(callback, num) {
 //   let scoreBoard = {};
 //   let score1 = 0;
@@ -142,7 +143,9 @@ Final Score: awayTeam - homeTeam */
 // }
 
 // console.log(scoreboard(inning, getInningScore, 6));
+
 //********************************************************************
+
 //*******************One callback, logs as it goes********************
 function scoreboard(callback, num) {
   let score1 = 0;
