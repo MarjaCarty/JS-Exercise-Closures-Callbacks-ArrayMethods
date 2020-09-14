@@ -147,15 +147,33 @@ Final Score: awayTeam - homeTeam */
 //********************************************************************
 
 //*******************One callback, logs as it goes********************
+// function scoreboard(callback, num) {
+//   let score1 = 0;
+//   let score2 = 0;
+//   for (let i = 0; i <= num; i++) {
+//     score1 = score1 + callback();
+//     score2 = score2 + callback();
+//     console.log(`Inning ${i}: ${score1} - ${score2}`)
+//   }
+//   return `Final score: ${score1} - ${score2}`
+// }
+
+// console.log(scoreboard(inning, 9));
+
+//*********************************************************************
+
+//*****************Best of both worlds?********************************
 function scoreboard(callback, num) {
+  let scoreBoard = {};
   let score1 = 0;
   let score2 = 0;
   for (let i = 0; i <= num; i++) {
     score1 = score1 + callback();
     score2 = score2 + callback();
-    console.log(`Inning ${i}: ${score1} - ${score2}`)
+    scoreBoard[`Inning ${i}`] = `${score1} - ${score2}`
   }
-  return `Final score: ${score1} - ${score2}`
+  scoreBoard["Final Score:"] = `${score1} - ${score2}`
+  return scoreBoard;
 }
 
 console.log(scoreboard(inning, 9));
