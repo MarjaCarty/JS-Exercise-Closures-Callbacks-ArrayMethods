@@ -27,10 +27,13 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ *  A: Counter1 is a function that returns a function, allowing the count variable to be reused in each instance of the function, and counter2 just returns the global count's updated score. The global count's score is not reset with every function instance.
  * 
  * 2. Which of the two uses a closure? How can you tell?
+ *  A: Counter1, as there is a function that reaches outside its scope into another function to grab a variable.
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ *  A: Counter1 is more useful when you need to track multiple scores, while counter2 is useful for tracking a single score.
  *
 */
 
